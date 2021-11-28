@@ -1,6 +1,6 @@
 # Caio's NeoVim Configuration
 
-This set of files configures NeoVim with sane defaults and adds a few plugins that makes life enjoyable again.
+This set of files configures NeoVim with sane defaults and adds a few plugins that make life enjoyable again.
 
 ## Requirements
 
@@ -8,7 +8,7 @@ This set of files configures NeoVim with sane defaults and adds a few plugins th
 
 At the time of this writing, this is how you'd install Packer:
 
-```
+```sh
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
@@ -23,7 +23,7 @@ git clone https://github.com/CaioBianchi/nvim
 
 Open up NeoVim and run:
 
-```
+```vimscript
 :PackerCompile
 :PackerInstall
 ```
@@ -38,8 +38,8 @@ Open up NeoVim and run:
 
 ## Updating
 
-Updating plugins is as easy as running the following in NeoVim:
+Updating plugins is as easy as running the following command in NeoVim:
 
-```
+```vimscript
 :PackerSync
 ```
