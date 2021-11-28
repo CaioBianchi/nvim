@@ -2,6 +2,17 @@
 
 This set of files configures NeoVim with sane defaults and adds a few plugins that makes life enjoyable again.
 
+## Requirements
+
+`Packer.nvim` is required for this repository to work. Follow instructions at https://github.com/wbthomason/packer.nvim#quickstart
+
+At the time of this writing, this is how you'd install Packer:
+
+```
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+
 ## Installation
 
 Go to `~/.config` and clone this repository:
