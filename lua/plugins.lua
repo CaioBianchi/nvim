@@ -2,7 +2,7 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-	-- Essential useins
+	-- Essential plugins
 	use 'janko-m/vim-test'
 	use 'pangloss/vim-javascript'
 	use 'pbrisbin/vim-mkdir'
