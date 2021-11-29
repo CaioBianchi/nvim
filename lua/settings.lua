@@ -35,7 +35,7 @@ g.is_posix = 1
 g.vim_json_conceal = 0
 g.nord_underline_option = 'none'
 g.nord_italic = true
-g.nord_italic_comments = false
+g.nord_italic_comments = true
 g.nord_minimal_mode = false
 vim.cmd([[
   colorscheme nordic
