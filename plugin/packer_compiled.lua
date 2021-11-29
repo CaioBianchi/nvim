@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/Users/caio/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["gruvbox-flat.nvim"] = {
+    loaded = true,
+    path = "/Users/caio/.local/share/nvim/site/pack/packer/start/gruvbox-flat.nvim",
+    url = "https://github.com/eddyekofo94/gruvbox-flat.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/Users/caio/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -109,10 +114,10 @@ _G.packer_plugins = {
     path = "/Users/caio/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/hoob3rt/lualine.nvim"
   },
-  nordbuddy = {
+  ["nordic.nvim"] = {
     loaded = true,
-    path = "/Users/caio/.local/share/nvim/site/pack/packer/start/nordbuddy",
-    url = "https://github.com/maaslalani/nordbuddy"
+    path = "/Users/caio/.local/share/nvim/site/pack/packer/start/nordic.nvim",
+    url = "https://github.com/andersevenrud/nordic.nvim"
   },
   ["nvim-lspconfig"] = {
     loaded = true,

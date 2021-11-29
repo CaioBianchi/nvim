@@ -51,7 +51,7 @@ require'telescope'.setup {
 }
 
 require'lualine'.setup {
-  options = { theme = 'nord' }
+  options = { theme = 'gruvbox-flat' }
 }
 
 require('bufferline').setup {

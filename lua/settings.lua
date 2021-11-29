@@ -35,12 +35,8 @@ local g = vim.g
 g.mapleader = ' '
 g.is_posix = 1
 g.vim_json_conceal = 0
-g.nord_underline_option = 'none'
-g.nord_italic = true
-g.nord_italic_comments = true
-g.nord_minimal_mode = false
 vim.cmd([[
-  colorscheme nordic
+  colorscheme gruvbox-flat
   filetype plugin indent on
   highlight Comment gui=italic
   highlight link CompeDocumentation NormalFloat
