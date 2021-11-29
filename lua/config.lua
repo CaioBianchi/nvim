@@ -31,8 +31,14 @@ require'nvim-tree'.setup {
 }
 require'nvim-treesitter.configs'.setup {
   highlight = {
-    enable = true
-  }
+    enable = true,
+    use_languagetree = true
+  },
+  indent = { enable = true },
+  context_commentstring = {
+    enable = true,
+    config = { c = "// %s", lua = "-- %s", vim = '" %s' },
+  },
 }
 
 require'gitsigns'.setup {
@@ -44,9 +50,34 @@ require'gitsigns'.setup {
 require'telescope'.setup {
   defaults = {
     prompt_prefix=🔍,
+    selection_strategy = "reset",
+    sorting_strategy = "ascending",
+    layout_strategy = "horizontal",
+    vimgrep_arguments = {
+      "rg",
+      "--no-heading",
+      "--with-filename",
+      "--line-number",
+      "--column",
+      "--smart-case",
+    },
     layout_config = {
-      horizontal = { width = 0.9 }
-    }
+      prompt_position = 'top',
+      horizontal = {
+        mirror = false,
+      },
+      vertical = {
+        width_padding = 0.05,
+        height_padding = 1,
+        preview_height = 0.5,
+      },
+      width = 0.95,
+      preview_cutoff = 120,
+      preview_width = 80,
+    },
+    scroll_strategy = "cycle",
+    winblend = 4,
+    color_devicons = true,
   }
 }
 
@@ -63,9 +94,11 @@ require('bufferline').setup {
           highlight = "Directory",
           text_align = "center"
       }
-    }
+    },
+    view = "multiwindow"
   }
 }
 
 require('lspkind').init{ with_text=false }
 require("lsp-colors").setup{}
+require'neoscroll'.setup {}
