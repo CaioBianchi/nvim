@@ -25,6 +25,8 @@ o.mouse = 'a'
 o.textwidth = 160
 o.cursorline = true
 o.background = 'dark'
+o.wildmenu = true
+o.wildmode = "list:longest,full"
 o.completeopt = "menu,menuone,noselect"
 o.clipboard = o.clipboard .. 'unnamedplus'
 
