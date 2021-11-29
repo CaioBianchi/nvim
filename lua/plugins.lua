@@ -22,7 +22,7 @@ return require('packer').startup(function()
 
 	-- Aesthetics
 	use 'edkolev/tmuxline.vim'
-	use 'maaslalani/nordbuddy'
+	use 'andersevenrud/nordic.nvim'
 
 	-- NeoVim Utilities
 	use {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'}

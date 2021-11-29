@@ -38,7 +38,7 @@ g.nord_italic = true
 g.nord_italic_comments = false
 g.nord_minimal_mode = false
 vim.cmd([[
-  colorscheme nordbuddy
+  colorscheme nordic
   filetype plugin indent on
   highlight Comment gui=italic
   highlight link CompeDocumentation NormalFloat
