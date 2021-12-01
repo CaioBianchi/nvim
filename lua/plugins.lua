@@ -22,8 +22,9 @@ return require('packer').startup(function()
 
   -- Aesthetics
   use 'edkolev/tmuxline.vim'
-  use 'andersevenrud/nordic.nvim'
   use 'eddyekofo94/gruvbox-flat.nvim'
+  use 'kyazdani42/nvim-web-devicons'
+  use 'karb94/neoscroll.nvim'
 
   -- NeoVim Utilities
   use {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'}
@@ -37,11 +38,9 @@ return require('packer').startup(function()
   use 'neovim/nvim-lspconfig'
   use 'nvim-lua/popup.nvim'
   use 'nvim-lua/plenary.nvim'
-  use 'kyazdani42/nvim-web-devicons'
   use 'norcalli/snippets.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'onsails/lspkind-nvim'
   use 'folke/lsp-colors.nvim'
-  use 'karb94/neoscroll.nvim'
 
 end)

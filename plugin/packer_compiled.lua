@@ -119,11 +119,6 @@ _G.packer_plugins = {
     path = "/Users/caio/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
     url = "https://github.com/karb94/neoscroll.nvim"
   },
-  ["nordic.nvim"] = {
-    loaded = true,
-    path = "/Users/caio/.local/share/nvim/site/pack/packer/start/nordic.nvim",
-    url = "https://github.com/andersevenrud/nordic.nvim"
-  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/caio/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
