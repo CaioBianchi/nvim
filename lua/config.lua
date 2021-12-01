@@ -159,10 +159,6 @@ require'telescope'.setup {
   }
 }
 
-local function clock()
-  return " " .. os.date("%I:%M%p")
-end
-
 local function lsp_progress(self, is_active)
   if not is_active then
     return ""
@@ -192,11 +188,11 @@ require'lualine'.setup {
   },
   sections = {
     lualine_a = { "mode" },
-    lualine_b = { "branch" },
+    lualine_b = { "branch", "diff" },
     lualine_c = { { "diagnostics", sources = { "nvim_lsp" } }, "filename" },
     lualine_x = { "filetype", lsp_progress },
-    lualine_y = { "progress" },
-    lualine_z = { clock },
+    lualine_y = { "buffers", "progress" },
+    lualine_z = { "location" },
   },
   inactive_sections = {
     lualine_a = {},
