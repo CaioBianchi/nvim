@@ -42,5 +42,5 @@ return require('packer').startup(function()
   use 'lukas-reineke/indent-blankline.nvim'
   use 'onsails/lspkind-nvim'
   use 'folke/lsp-colors.nvim'
-
+  use 'folke/which-key.nvim'
 end)

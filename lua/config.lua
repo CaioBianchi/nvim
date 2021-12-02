@@ -230,5 +230,6 @@ require'bufferline'.setup {
 }
 
 require'lspkind'.init{ with_text=false }
-require'lsp-colors'.setup{}
+require'lsp-colors'.setup {}
 require'neoscroll'.setup {}
+require'which-key'.setup {}
