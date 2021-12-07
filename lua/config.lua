@@ -233,3 +233,12 @@ require'lspkind'.init{ with_text=false }
 require'lsp-colors'.setup {}
 require'neoscroll'.setup {}
 require'which-key'.setup {}
+require'nvim-treesitter.configs'.setup {
+    textsubjects = {
+        enable = true,
+        keymaps = {
+            ['.'] = 'textsubjects-smart',
+            [';'] = 'textsubjects-container-outer',
+        }
+    },
+}

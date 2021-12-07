@@ -43,4 +43,5 @@ return require('packer').startup(function()
   use 'onsails/lspkind-nvim'
   use 'folke/lsp-colors.nvim'
   use 'folke/which-key.nvim'
+  use 'RRethy/nvim-treesitter-textsubjects'
 end)
