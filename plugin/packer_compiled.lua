@@ -164,10 +164,20 @@ _G.packer_plugins = {
     path = "/Users/caio/.local/share/nvim/site/pack/packer/start/snippets.nvim",
     url = "https://github.com/norcalli/snippets.nvim"
   },
+  ["sqlite.lua"] = {
+    loaded = true,
+    path = "/Users/caio/.local/share/nvim/site/pack/packer/start/sqlite.lua",
+    url = "https://github.com/tami5/sqlite.lua"
+  },
   tComment = {
     loaded = true,
     path = "/Users/caio/.local/share/nvim/site/pack/packer/start/tComment",
     url = "https://github.com/vim-scripts/tComment"
+  },
+  ["telescope-frecency.nvim"] = {
+    loaded = true,
+    path = "/Users/caio/.local/share/nvim/site/pack/packer/start/telescope-frecency.nvim",
+    url = "https://github.com/nvim-telescope/telescope-frecency.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

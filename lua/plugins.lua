@@ -33,6 +33,7 @@ return require('packer').startup(function()
   use {'akinsho/bufferline.nvim', requires = {'kyazdani42/nvim-web-devicons'} }
   use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
   use {'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim'} }
+  use {'nvim-telescope/telescope-frecency.nvim', requires = {"tami5/sqlite.lua"}}
   use {'ms-jpq/coq_nvim', branch='coq'}
   use {'ms-jpq/coq.artifacts', branch='artifacts'}
   use 'neovim/nvim-lspconfig'
@@ -44,4 +45,5 @@ return require('packer').startup(function()
   use 'folke/lsp-colors.nvim'
   use 'folke/which-key.nvim'
   use 'RRethy/nvim-treesitter-textsubjects'
+  use 'tami5/sqlite.lua'
 end)
