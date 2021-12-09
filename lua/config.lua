@@ -1,7 +1,7 @@
 -- Plugin Configs
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 local nvim_lsp = require('lspconfig')
-vim.g.coq_settings = { auto_start = 'shut-up' }
+vim.g.coq_settings = { auto_start = 'shut-up', clients = { tree_sitter = { slow_threshold = 1 }} }
 local coq = require('coq')
 
 capabilities.textDocument.completion.completionItem.snippetSupport = true
