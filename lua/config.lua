@@ -189,7 +189,7 @@ require'lualine'.setup {
   sections = {
     lualine_a = { "mode" },
     lualine_b = { "branch", "diff" },
-    lualine_c = { { "diagnostics", sources = { "nvim_lsp" } }, "filename" },
+    lualine_c = { { "diagnostics", sources = { "nvim_diagnostic" } }, "filename" },
     lualine_x = { "filetype", lsp_progress },
     lualine_y = { "buffers", "progress" },
     lualine_z = { "location" },
