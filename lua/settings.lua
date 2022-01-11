@@ -36,7 +36,7 @@ g.mapleader = ' '
 g.is_posix = 1
 g.vim_json_conceal = 0
 vim.cmd([[
-  colorscheme gruvbox-flat
+  colorscheme kanagawa
   filetype plugin indent on
   highlight Comment gui=italic
   highlight link CompeDocumentation NormalFloat

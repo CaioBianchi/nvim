@@ -22,9 +22,8 @@ return require('packer').startup(function()
 
   -- Aesthetics
   use 'edkolev/tmuxline.vim'
-  use 'eddyekofo94/gruvbox-flat.nvim'
   use 'kyazdani42/nvim-web-devicons'
-  use 'karb94/neoscroll.nvim'
+  use 'rebelot/kanagawa.nvim'
 
   -- NeoVim Utilities
   use {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'}

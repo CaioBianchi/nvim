@@ -89,15 +89,15 @@ _G.packer_plugins = {
     path = "/Users/caio/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  ["gruvbox-flat.nvim"] = {
-    loaded = true,
-    path = "/Users/caio/.local/share/nvim/site/pack/packer/start/gruvbox-flat.nvim",
-    url = "https://github.com/eddyekofo94/gruvbox-flat.nvim"
-  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/Users/caio/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["kanagawa.nvim"] = {
+    loaded = true,
+    path = "/Users/caio/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
   },
   ["lsp-colors.nvim"] = {
     loaded = true,
@@ -113,11 +113,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/caio/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/hoob3rt/lualine.nvim"
-  },
-  ["neoscroll.nvim"] = {
-    loaded = true,
-    path = "/Users/caio/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
-    url = "https://github.com/karb94/neoscroll.nvim"
   },
   ["nvim-lspconfig"] = {
     loaded = true,

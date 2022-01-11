@@ -181,7 +181,7 @@ vim.cmd([[autocmd User LspProgressUpdate let &ro = &ro]])
 
 require'lualine'.setup {
   options = { 
-    theme = 'gruvbox-flat',
+    theme = 'kanagawa',
     section_separators = { left = "", right = "" },
     component_separators = { left = "", right = "" },
     icons_enabled = true
@@ -231,7 +231,6 @@ require'bufferline'.setup {
 
 require'lspkind'.init{ with_text=false }
 require'lsp-colors'.setup {}
-require'neoscroll'.setup {}
 require'which-key'.setup {}
 require'nvim-treesitter.configs'.setup {
     textsubjects = {
