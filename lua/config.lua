@@ -229,7 +229,6 @@ require'bufferline'.setup {
   }
 }
 
-require'lspkind'.init{ with_text=false }
 require'lsp-colors'.setup {}
 require'which-key'.setup {}
 require'nvim-treesitter.configs'.setup {

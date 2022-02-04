@@ -40,7 +40,6 @@ return require('packer').startup(function()
   use 'nvim-lua/plenary.nvim'
   use 'norcalli/snippets.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
-  use 'onsails/lspkind-nvim'
   use 'folke/lsp-colors.nvim'
   use 'folke/which-key.nvim'
   use 'RRethy/nvim-treesitter-textsubjects'
