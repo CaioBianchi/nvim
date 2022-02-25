@@ -104,15 +104,15 @@ _G.packer_plugins = {
     path = "/Users/caio/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
     url = "https://github.com/folke/lsp-colors.nvim"
   },
-  ["lspkind-nvim"] = {
-    loaded = true,
-    path = "/Users/caio/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
-    url = "https://github.com/onsails/lspkind-nvim"
-  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/caio/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/hoob3rt/lualine.nvim"
+  },
+  neogit = {
+    loaded = true,
+    path = "/Users/caio/.local/share/nvim/site/pack/packer/start/neogit",
+    url = "https://github.com/TimUntersberger/neogit"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -168,11 +168,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/caio/.local/share/nvim/site/pack/packer/start/tComment",
     url = "https://github.com/vim-scripts/tComment"
-  },
-  ["telescope-frecency.nvim"] = {
-    loaded = true,
-    path = "/Users/caio/.local/share/nvim/site/pack/packer/start/telescope-frecency.nvim",
-    url = "https://github.com/nvim-telescope/telescope-frecency.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -272,5 +267,6 @@ if should_profile then save_profiles() end
 end)
 
 if not no_errors then
+  error_msg = error_msg:gsub('"', '\\"')
   vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your config for correctness" | echohl None')
 end
