@@ -23,7 +23,7 @@ return require('packer').startup(function()
   -- Aesthetics
   use 'edkolev/tmuxline.vim'
   use 'kyazdani42/nvim-web-devicons'
-  use 'rebelot/kanagawa.nvim'
+  use 'folke/tokyonight.nvim'
 
   -- NeoVim Utilities
   use {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'}
@@ -44,4 +44,5 @@ return require('packer').startup(function()
   use 'folke/which-key.nvim'
   use 'RRethy/nvim-treesitter-textsubjects'
   use 'tami5/sqlite.lua'
+  use 'ggandor/lightspeed.nvim'
 end)

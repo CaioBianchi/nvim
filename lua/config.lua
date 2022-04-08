@@ -181,7 +181,7 @@ vim.cmd([[autocmd User LspProgressUpdate let &ro = &ro]])
 
 require'lualine'.setup {
   options = { 
-    theme = 'kanagawa',
+    theme = 'tokyonight',
     section_separators = { left = "", right = "" },
     component_separators = { left = "", right = "" },
     icons_enabled = true
@@ -225,7 +225,6 @@ require'bufferline'.setup {
       end
       return s
     end
-    -- separator_style = "slant"
   }
 }
 

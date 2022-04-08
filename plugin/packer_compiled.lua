@@ -94,10 +94,10 @@ _G.packer_plugins = {
     path = "/Users/caio/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
-  ["kanagawa.nvim"] = {
+  ["lightspeed.nvim"] = {
     loaded = true,
-    path = "/Users/caio/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
-    url = "https://github.com/rebelot/kanagawa.nvim"
+    path = "/Users/caio/.local/share/nvim/site/pack/packer/start/lightspeed.nvim",
+    url = "https://github.com/ggandor/lightspeed.nvim"
   },
   ["lsp-colors.nvim"] = {
     loaded = true,
@@ -178,6 +178,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/caio/.local/share/nvim/site/pack/packer/start/tmuxline.vim",
     url = "https://github.com/edkolev/tmuxline.vim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/Users/caio/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["vim-bundler"] = {
     loaded = true,
