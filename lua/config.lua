@@ -1,9 +1,7 @@
 -- Plugin Configs
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-local nvim_lsp = require('lspconfig')
-vim.g.coq_settings = { auto_start = 'shut-up', clients = { tree_sitter = { slow_threshold = 1 }} }
 local coq = require('coq')
-
+vim.g.coq_settings = { auto_start = 'shut-up', clients = { tree_sitter = { slow_threshold = 1 }} }
+local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities.textDocument.completion.completionItem.resolveSupport = {
   properties = {
@@ -13,6 +11,7 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
   }
 }
 
+local nvim_lsp = require('lspconfig')
 nvim_lsp.rust_analyzer.setup(coq.lsp_ensure_capabilities({capabilities = capabilities}))
 nvim_lsp.diagnosticls.setup(coq.lsp_ensure_capabilities({capabilities = capabilities}))
 nvim_lsp.solargraph.setup(coq.lsp_ensure_capabilities({capabilities = capabilities}))
@@ -239,3 +238,5 @@ require'nvim-treesitter.configs'.setup {
         }
     },
 }
+
+require 'lspsaga'.setup {}

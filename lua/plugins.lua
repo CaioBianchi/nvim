@@ -45,4 +45,6 @@ return require('packer').startup(function()
   use 'RRethy/nvim-treesitter-textsubjects'
   use 'tami5/sqlite.lua'
   use 'ggandor/lightspeed.nvim'
+  use 'github/copilot.vim'
+  use 'tami5/lspsaga.nvim'
 end)
