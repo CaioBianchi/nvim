@@ -15,7 +15,6 @@ return require('packer').startup(function()
   use 'tpope/vim-surround'
   use 'tpope/vim-unimpaired'
   use 'vim-ruby/vim-ruby'
-  use 'vim-scripts/tComment'
 
   -- NeoVim Utilities
   use {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'}

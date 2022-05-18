@@ -204,11 +204,6 @@ _G.packer_plugins = {
     path = "/Users/caio/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
     url = "https://github.com/simrat39/symbols-outline.nvim"
   },
-  tComment = {
-    loaded = true,
-    path = "/Users/caio/.local/share/nvim/site/pack/packer/start/tComment",
-    url = "https://github.com/vim-scripts/tComment"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/caio/.local/share/nvim/site/pack/packer/start/telescope.nvim",
