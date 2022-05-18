@@ -1,6 +1,4 @@
 -- Plugin Configs
-local coq = require('coq')
-vim.g.coq_settings = { auto_start = 'shut-up', clients = { tree_sitter = { slow_threshold = 1 }} }
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities.textDocument.completion.completionItem.resolveSupport = {
@@ -12,10 +10,74 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 }
 
 local nvim_lsp = require('lspconfig')
-nvim_lsp.rust_analyzer.setup(coq.lsp_ensure_capabilities({capabilities = capabilities}))
-nvim_lsp.diagnosticls.setup(coq.lsp_ensure_capabilities({capabilities = capabilities}))
-nvim_lsp.solargraph.setup(coq.lsp_ensure_capabilities({capabilities = capabilities}))
-nvim_lsp.tsserver.setup(coq.lsp_ensure_capabilities({capabilities = capabilities}))
+nvim_lsp.rust_analyzer.setup{capabilities = capabilities}
+nvim_lsp.diagnosticls.setup{capabilities = capabilities}
+nvim_lsp.solargraph.setup{capabilities = capabilities}
+nvim_lsp.tsserver.setup{capabilities = capabilities}
+nvim_lsp.sumneko_lua.setup{capabilities = capabilities}
+
+-- Setup nvim-cmp.
+local cmp = require'cmp'
+
+cmp.setup({
+	snippet = {
+		-- REQUIRED - you must specify a snippet engine
+		expand = function(args)
+			require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+		end,
+	},
+	window = {
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
+	},
+	mapping = cmp.mapping.preset.insert({
+		['<C-b>'] = cmp.mapping.scroll_docs(-4),
+		['<C-f>'] = cmp.mapping.scroll_docs(4),
+		['<C-Space>'] = cmp.mapping.complete(),
+		['<C-e>'] = cmp.mapping.abort(),
+		['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+	}),
+	sources = cmp.config.sources({
+		{ name = 'nvim_lsp' },
+		{ name = 'luasnip' }, -- For luasnip users.
+	}, {
+		{ name = 'buffer' },
+	})
+})
+
+-- Set configuration for specific filetype.
+cmp.setup.filetype('gitcommit', {
+	sources = cmp.config.sources({
+		{ name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
+	}, {
+		{ name = 'buffer' },
+	})
+})
+
+-- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline('/', {
+	mapping = cmp.mapping.preset.cmdline(),
+	sources = {
+		{ name = 'buffer' }
+	}
+})
+
+-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline(':', {
+	mapping = cmp.mapping.preset.cmdline(),
+	sources = cmp.config.sources({
+		{ name = 'path' }
+	}, {
+		{ name = 'cmdline' }
+	})
+})
+
+-- Setup lspconfig.
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
+	capabilities = capabilities
+}
 
 -- Automatically update diagnostics
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -64,7 +126,8 @@ require'indent_blankline'.setup {
   show_current_context = true,
   show_current_context_start = true,
   use_treesitter = true,
-  buftype_exclude = {"terminal"} 
+  buftype_exclude = {"terminal", "alpha"},
+  filetype_exclude = {"alpha"}
 }
 
 require'nvim-tree'.setup {
@@ -183,7 +246,8 @@ require'lualine'.setup {
     theme = 'tokyonight',
     section_separators = { left = "", right = "" },
     component_separators = { left = "", right = "" },
-    icons_enabled = true
+    icons_enabled = true,
+    globalstatus = true
   },
   sections = {
     lualine_a = { "mode" },
@@ -229,14 +293,7 @@ require'bufferline'.setup {
 
 require'lsp-colors'.setup {}
 require'which-key'.setup {}
-require'nvim-treesitter.configs'.setup {
-    textsubjects = {
-        enable = true,
-        keymaps = {
-            ['.'] = 'textsubjects-smart',
-            [';'] = 'textsubjects-container-outer',
-        }
-    },
-}
-
-require 'lspsaga'.setup {}
+require'Comment'.setup {}
+require'alpha'.setup(require'alpha.themes.dashboard'.config)
+require'nvim-lsp-installer'.setup {}
+require'luasnip'.filetype_extend("ruby", {"rails"})

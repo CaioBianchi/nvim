@@ -26,8 +26,10 @@ o.textwidth = 160
 o.cursorline = true
 o.background = 'dark'
 o.wildmenu = true
+o.termguicolors = true
 -- o.wildmode = "list:longest,full"
-o.completeopt = "menu,menuone,noselect"
+o.laststatus = 3
+o.completeopt = "menuone,noselect"
 o.clipboard = o.clipboard .. 'unnamedplus'
 
 -- Global Configs

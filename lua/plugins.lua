@@ -3,9 +3,6 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- Essential plugins
-  use 'janko-m/vim-test'
-  use 'pangloss/vim-javascript'
-  use 'pbrisbin/vim-mkdir'
   use 'tpope/vim-bundler'
   use 'tpope/vim-endwise'
   use 'tpope/vim-eunuch'
@@ -20,11 +17,6 @@ return require('packer').startup(function()
   use 'vim-ruby/vim-ruby'
   use 'vim-scripts/tComment'
 
-  -- Aesthetics
-  use 'edkolev/tmuxline.vim'
-  use 'kyazdani42/nvim-web-devicons'
-  use 'folke/tokyonight.nvim'
-
   -- NeoVim Utilities
   use {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'}
   use {'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'}}
@@ -32,19 +24,27 @@ return require('packer').startup(function()
   use {'akinsho/bufferline.nvim', requires = {'kyazdani42/nvim-web-devicons'} }
   use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
   use {'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim'} }
-  use {'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
-  use {'ms-jpq/coq_nvim', branch='coq'}
-  use {'ms-jpq/coq.artifacts', branch='artifacts'}
-  use 'neovim/nvim-lspconfig'
+  use 'goolord/alpha-nvim'
+  use 'numToStr/Comment.nvim'
   use 'nvim-lua/popup.nvim'
   use 'nvim-lua/plenary.nvim'
-  use 'norcalli/snippets.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
+  use 'kyazdani42/nvim-web-devicons'
+  use 'folke/tokyonight.nvim'
   use 'folke/lsp-colors.nvim'
   use 'folke/which-key.nvim'
-  use 'RRethy/nvim-treesitter-textsubjects'
-  use 'tami5/sqlite.lua'
-  use 'ggandor/lightspeed.nvim'
   use 'github/copilot.vim'
-  use 'tami5/lspsaga.nvim'
+  use 'lewis6991/impatient.nvim'
+
+  -- LSP plugins
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+  use 'williamboman/nvim-lsp-installer'
+  use 'neovim/nvim-lspconfig'
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'rafamadriz/friendly-snippets'
 end)
