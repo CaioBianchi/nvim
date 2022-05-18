@@ -18,6 +18,7 @@ nvim_lsp.sumneko_lua.setup{capabilities = capabilities}
 
 -- Setup nvim-cmp.
 local cmp = require'cmp'
+local lspkind = require'lspkind'
 
 cmp.setup({
 	snippet = {
@@ -26,6 +27,12 @@ cmp.setup({
 			require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
 		end,
 	},
+  formatting = {
+    format = lspkind.cmp_format({
+      mode = 'symbol', -- show only symbol annotations
+      maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+    })
+  },
 	window = {
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered(),
@@ -74,16 +81,12 @@ cmp.setup.cmdline(':', {
 
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
-	capabilities = capabilities
-}
 
 -- Automatically update diagnostics
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = true,
   update_in_insert = false,
-  virtual_text = { spacing = 4, prefix = "●" },
+  virtual_text = { spacing = 4, prefix = "●", signs = true },
   severity_sort = true,
 })
 

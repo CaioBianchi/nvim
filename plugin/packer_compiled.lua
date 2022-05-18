@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/Users/caio/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
     url = "https://github.com/folke/lsp-colors.nvim"
   },
+  ["lspkind.nvim"] = {
+    loaded = true,
+    path = "/Users/caio/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
+    url = "https://github.com/onsails/lspkind.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/caio/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -193,6 +198,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/caio/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["symbols-outline.nvim"] = {
+    loaded = true,
+    path = "/Users/caio/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
+    url = "https://github.com/simrat39/symbols-outline.nvim"
   },
   tComment = {
     loaded = true,

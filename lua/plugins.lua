@@ -47,4 +47,6 @@ return require('packer').startup(function()
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
+  use 'simrat39/symbols-outline.nvim'
+  use 'onsails/lspkind.nvim'
 end)
