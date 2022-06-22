@@ -12,7 +12,17 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 local nvim_lsp = require('lspconfig')
 nvim_lsp.rust_analyzer.setup{capabilities = capabilities}
 nvim_lsp.diagnosticls.setup{capabilities = capabilities}
-nvim_lsp.solargraph.setup{capabilities = capabilities}
+nvim_lsp.solargraph.setup{
+  capabilities = capabilities,
+  settings = {
+    solargraph = {
+      use_rust_analyzer = true,
+      autoformat = true,
+      diagnostics = true,
+      formatting = true
+    }
+  }
+}
 nvim_lsp.tsserver.setup{capabilities = capabilities}
 nvim_lsp.sumneko_lua.setup{capabilities = capabilities}
 
@@ -99,7 +109,7 @@ end
 
 vim.g.indent_blankline_show_trailing_blankline_indent = false
 vim.opt.list = true
-vim.opt.listchars:append("space:⋅")
+-- vim.opt.listchars:append("space:⋅")
 vim.wo.colorcolumn = "99999"
 vim.g.indent_blankline_context_patterns = {
   "class",

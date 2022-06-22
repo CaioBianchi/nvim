@@ -32,7 +32,6 @@ return require('packer').startup(function()
   use 'folke/tokyonight.nvim'
   use 'folke/lsp-colors.nvim'
   use 'folke/which-key.nvim'
-  use 'github/copilot.vim'
   use 'lewis6991/impatient.nvim'
 
   -- LSP plugins
