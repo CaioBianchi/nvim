@@ -23,7 +23,6 @@ return require('packer').startup(function()
   use {'akinsho/bufferline.nvim', requires = {'kyazdani42/nvim-web-devicons'} }
   use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
   use {'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim'} }
-  use 'goolord/alpha-nvim'
   use 'numToStr/Comment.nvim'
   use 'nvim-lua/popup.nvim'
   use 'nvim-lua/plenary.nvim'

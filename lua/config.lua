@@ -139,12 +139,12 @@ require'indent_blankline'.setup {
   show_current_context = true,
   show_current_context_start = true,
   use_treesitter = true,
-  buftype_exclude = {"terminal", "alpha"},
-  filetype_exclude = {"alpha"}
+  buftype_exclude = {"terminal"},
 }
 
 require'nvim-tree'.setup {
   disable_netrw = false,
+  open_on_setup = true,
   diagnostics = {
     enable = true
   }
@@ -307,6 +307,5 @@ require'bufferline'.setup {
 require'lsp-colors'.setup {}
 require'which-key'.setup {}
 require'Comment'.setup {}
-require'alpha'.setup(require'alpha.themes.dashboard'.config)
 require'nvim-lsp-installer'.setup {}
 require'luasnip'.filetype_extend("ruby", {"rails"})
