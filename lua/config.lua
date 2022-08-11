@@ -144,7 +144,7 @@ require'indent_blankline'.setup {
 
 require'nvim-tree'.setup {
   disable_netrw = false,
-  open_on_setup = true,
+  open_on_setup = false,
   diagnostics = {
     enable = true
   }
@@ -256,7 +256,7 @@ vim.cmd([[autocmd User LspProgressUpdate let &ro = &ro]])
 
 require'lualine'.setup {
   options = { 
-    theme = 'tokyonight',
+    theme = 'auto',
     section_separators = { left = "", right = "" },
     component_separators = { left = "", right = "" },
     icons_enabled = true,
