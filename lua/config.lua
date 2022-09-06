@@ -1,3 +1,5 @@
+require'impatient'
+
 -- Plugin Configs
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -164,7 +166,6 @@ require'nvim-treesitter.configs'.setup {
 require'gitsigns'.setup {
   numhl = true,
   current_line_blame = true,
-  current_line_blame_opts = { delay = 0 },
   signs = {
     add = { 
       hl = "GitSignsAdd", 
@@ -305,7 +306,7 @@ require'bufferline'.setup {
 }
 
 require'lsp-colors'.setup {}
-require'which-key'.setup {}
 require'Comment'.setup {}
 require'nvim-lsp-installer'.setup {}
 require'luasnip'.filetype_extend("ruby", {"rails"})
+require'symbols-outline'.setup {}

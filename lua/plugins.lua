@@ -21,8 +21,8 @@ return require('packer').startup(function()
   use {'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'}}
   use {'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
   use {'akinsho/bufferline.nvim', requires = {'kyazdani42/nvim-web-devicons'} }
-  use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
   use {'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim'} }
+  use 'lewis6991/gitsigns.nvim'
   use 'numToStr/Comment.nvim'
   use 'nvim-lua/popup.nvim'
   use 'nvim-lua/plenary.nvim'
@@ -30,7 +30,6 @@ return require('packer').startup(function()
   use 'kyazdani42/nvim-web-devicons'
   use 'folke/tokyonight.nvim'
   use 'folke/lsp-colors.nvim'
-  use 'folke/which-key.nvim'
   use 'lewis6991/impatient.nvim'
 
   -- LSP plugins
