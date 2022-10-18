@@ -37,12 +37,8 @@ local g = vim.g
 g.mapleader = ' '
 g.is_posix = 1
 g.vim_json_conceal = 0
-g.tokyonight_italic_functions = true
-g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
-g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
-g.tokyonight_hide_inactive_statusline = true
 vim.cmd([[
-  colorscheme tokyonight
+  colorscheme github_dark
   filetype plugin indent on
   highlight Comment gui=italic
   highlight link CompeDocumentation NormalFloat

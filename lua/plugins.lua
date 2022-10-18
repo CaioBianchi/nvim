@@ -22,13 +22,16 @@ return require('packer').startup(function()
   use {'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
   use {'akinsho/bufferline.nvim', requires = {'kyazdani42/nvim-web-devicons'} }
   use {'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim'} }
+  use 'nvim-treesitter/nvim-treesitter-context'
   use 'lewis6991/gitsigns.nvim'
   use 'numToStr/Comment.nvim'
   use 'nvim-lua/popup.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'kyazdani42/nvim-web-devicons'
-  use 'folke/tokyonight.nvim'
+  -- use 'folke/tokyonight.nvim'
+  use 'ggandor/leap.nvim'
+  use 'projekt0n/github-nvim-theme'
   use 'folke/lsp-colors.nvim'
   use 'lewis6991/impatient.nvim'
 

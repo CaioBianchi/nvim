@@ -92,7 +92,7 @@ cmp.setup.cmdline(':', {
 })
 
 -- Setup lspconfig.
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 -- Automatically update diagnostics
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -112,7 +112,7 @@ end
 vim.g.indent_blankline_show_trailing_blankline_indent = false
 vim.opt.list = true
 -- vim.opt.listchars:append("space:⋅")
-vim.wo.colorcolumn = "99999"
+-- vim.wo.colorcolumn = "99999"
 vim.g.indent_blankline_context_patterns = {
   "class",
   "return",
@@ -310,3 +310,5 @@ require'Comment'.setup {}
 require'nvim-lsp-installer'.setup {}
 require'luasnip'.filetype_extend("ruby", {"rails"})
 require'symbols-outline'.setup {}
+require'github-theme'.setup {}
+require'leap'.add_default_mappings()
